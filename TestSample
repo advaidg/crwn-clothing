@@ -1,0 +1,14 @@
+Private Sub Formatting_FormatField(ByVal FieldText As String, FormattedText As String, ErrDescription As String, ValidFormat As Boolean)
+	If Len(FieldText) = 0 Then
+		ValidFormat = False
+		ErrDescription = "Field must not be empty"
+	Else
+		 
+		FormattedText = Replace(FieldText, "-", "")
+		FormattedText = Replace(FormattedText, "/", "")
+		FormattedText = Replace(FormattedText, ".", "")
+		ValidFormat = True
+	End If
+
+End Sub
+
